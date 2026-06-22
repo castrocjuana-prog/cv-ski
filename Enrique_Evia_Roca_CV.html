@@ -43,12 +43,15 @@
   .header {
     display: grid;
     grid-template-columns: 110px 1fr;
+    grid-template-rows: 1fr;
     gap: 0 22px;
     align-items: center;
     padding: 28px 36px 24px;
     border-bottom: 2.5px solid var(--blue-mid);
     position: relative;
   }
+
+  .header > * { min-width: 0; }
 
   .header::before {
     content: '';
@@ -66,11 +69,16 @@
     border: 1.5px solid var(--blue-rule);
     flex-shrink: 0;
     background: var(--blue-light);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    display: block;
     position: relative;
+  }
+
+  .photo-wrap img {
+    display: block;
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    object-position: center top;
   }
 
   .photo-placeholder-icon {
@@ -393,7 +401,7 @@
     <div class="section">
       <div class="section-title">Certifications &amp; Education</div>
       <table class="cred-table">
-        <tr><td>2023</td><td><b>FIS Technical Delegate</b> ISIA (International Skiing Association)</td></tr>
+        <tr><td>2023</td><td><b>FIS Technical Delegate</b></td></tr>
         <tr><td>2023</td><td>National Ski Instructor, <b>Level 4</b> — AADIDESS / ISIA</td></tr>
         <tr><td>2019</td><td><b>Stage IV Instructor</b> — Aspen/PSIA — Internally assessed by the Aspen Academy based on exemplary performance in all areas of S3 Standards of Success. On-snow performance and teaching/technical sections assessed to PSIA-RM-AASI RMT standard.</td></tr>
         <tr><td>2018</td><td><b>National Technical Delegate</b> — FASA</td></tr>
@@ -426,6 +434,19 @@
 
       <div class="job">
         <div class="job-header">
+          <div class="job-title">Co-founder &amp; Boot Fitting Specialist</div>
+          <div class="job-dates">2019 – present</div>
+        </div>
+        <div class="job-sub">Ottos Boot Room · San Carlos de Bariloche, Argentina</div>
+        <ul>
+          <li>Co-founded and operate a specialized ski boot fitting and alignment workshop at the base of Cerro Catedral.</li>
+          <li>Custom boot fitting for comfort and performance, including orthotic fabrication and precision alignment.</li>
+          <li>On-snow movement analysis and boot alignment for competitive and recreational clients.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
           <div class="job-title">Ski Coach — Argentina National Team</div>
           <div class="job-dates">2020</div>
         </div>
@@ -451,19 +472,6 @@
           <li>Theoretical and on-snow explanations of skiing technique and athlete development.</li>
           <li>Movement analysis of athletes on and off the course.</li>
           <li>Race course setting methodology and seasonal training planification.</li>
-        </ul>
-      </div>
-
-      <div class="job">
-        <div class="job-header">
-          <div class="job-title">Ottos Boot Room — Co-founder &amp; Boot Fitting Specialist</div>
-          <div class="job-dates">2019 – present</div>
-        </div>
-        <div class="job-sub">San Carlos de Bariloche, Argentina</div>
-        <ul>
-          <li>Founded and operate a specialized ski boot fitting workshop at the base of Cerro Catedral.</li>
-          <li>Custom boot fitting for comfort and performance, including orthotic fabrication and precision alignment.</li>
-          <li>On-snow movement analysis and boot alignment for performance improvement.</li>
         </ul>
       </div>
 
@@ -514,19 +522,6 @@
 
       <div class="job">
         <div class="job-header">
-          <div class="job-title">Ski Instructor — Scuola di Sci Val Gardena</div>
-          <div class="job-dates">2014/15, 2015/16</div>
-        </div>
-        <div class="job-sub">Madonna di Campiglio, TN, Italy</div>
-        <ul>
-          <li>Teaching Alpine Skiing to all ages and levels in Ski School.</li>
-          <li>Ensuring safety and well-being of clients.</li>
-          <li>Developing genuine interest and enjoyment of the sport.</li>
-        </ul>
-      </div>
-
-      <div class="job">
-        <div class="job-header">
           <div class="job-title">Independent Ski Instructor — San Carlos de Bariloche</div>
           <div class="job-dates">2017–2019, 2021 – present</div>
         </div>
@@ -540,10 +535,23 @@
 
       <div class="job">
         <div class="job-header">
-          <div class="job-title">Private Summer Training Camp — Head Coach</div>
-          <div class="job-dates">Jan 2011</div>
+          <div class="job-title">Ski Instructor — Scuola di Sci Val Gardena</div>
+          <div class="job-dates">2014/15, 2015/16</div>
         </div>
-        <div class="job-sub">Courchevel, France</div>
+        <div class="job-sub">Madonna di Campiglio, TN, Italy</div>
+        <ul>
+          <li>Teaching Alpine Skiing to all ages and levels in Ski School.</li>
+          <li>Ensuring safety and well-being of clients.</li>
+          <li>Developing genuine interest and enjoyment of the sport.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <div class="job-title">Private Summer Training Camp — Head Coach</div>
+          <div class="job-dates">Feb–Mar 2012, 2013, 2014, 2015</div>
+        </div>
+        <div class="job-sub">Madonna di Campiglio, TN, Italy</div>
         <ul>
           <li>Teaching all skills and manoeuvres to develop competent ski racers.</li>
           <li>Course setting and race course training.</li>
@@ -555,9 +563,9 @@
       <div class="job">
         <div class="job-header">
           <div class="job-title">Private Summer Training Camp — Head Coach</div>
-          <div class="job-dates">Feb–Mar 2012, 2013, 2014, 2015</div>
+          <div class="job-dates">Jan 2011</div>
         </div>
-        <div class="job-sub">Madonna di Campiglio, TN, Italy</div>
+        <div class="job-sub">Courchevel, France</div>
         <ul>
           <li>Teaching all skills and manoeuvres to develop competent ski racers.</li>
           <li>Course setting and race course training.</li>
@@ -634,7 +642,6 @@
         <li>FIS World Junior Championships ITA 2002, FRA 2003, SLO 2004</li>
         <li>Europe Cup 2004</li>
         <li>South American Cup 2000–2006, 2013–2020 (Best result 1st)</li>
-        <li>3rd in Slalom Argentina National Championship 2004 and 2015</li>
       </ul>
 
       <div class="fis-wrap">
@@ -653,6 +660,7 @@
         <li>2nd place <b>SOUTH AMERICAN CUP</b> Bariloche 2002</li>
         <li>1st place <b>TROFEO TOP CAEI FIS</b> Baqueira Beret 2004</li>
         <li>2nd place <b>SPANISH NATIONAL JR CHAMPIONSHIP</b> Candanchu 2004</li>
+        <li>3rd place <b>ARGENTINA NATIONAL CHAMPIONSHIP</b> Slalom 2004 and 2015</li>
         <li>2nd place in <b>FIS MASTER WORLD CUP CRITERIUM</b> 2016</li>
         <li>2nd place <b>EL COLORADO FIS</b> Santiago de Chile 2017</li>
         <li>1st place <b>MASTERS NATIONAL</b> Chile 2017</li>
